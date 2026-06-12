@@ -1,5 +1,5 @@
 // 1. O'zgaruvchilar (Variables)
-$primary-red: #b11329; // Rasmga mos to'q qizil rang
+$primary-red: #b11329; 
 $white: #ffffff;
 $font-stack: 'Arial', sans-serif;
 
@@ -19,6 +19,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    box-sizing: border-box;
   }
 
   // Logotip qismi
@@ -29,18 +30,19 @@ header {
     img {
       height: 40px; 
       object-fit: contain;
+      transition: height 0.3s ease;
     }
   }
 
   // Navigatsiya menyusi
   .navbar {
-    margin-left: auto; // Menyuni o'ng tomonga surish
+    margin-left: auto; 
     margin-right: 40px;
 
     .nav-links {
       display: flex;
       list-style: none;
-      gap: 35px; // Linklar orasidagi masofa
+      gap: 35px; 
       margin: 0;
       padding: 0;
 
@@ -53,7 +55,7 @@ header {
           transition: opacity 0.3s ease;
 
           &:hover {
-            opacity: 0.8; // Sichqoncha kelganda biroz xiralashish effekti
+            opacity: 0.8;
           }
         }
       }
@@ -66,13 +68,12 @@ header {
     align-items: center;
     gap: 15px;
 
-    // Rasmdagi Log In tugmasi stili
     .login-btn {
       background: transparent;
       color: $white;
       border: 1px solid $white;
       padding: 8px 28px;
-      border-radius: 25px; // Dumaloq burchaklar (Pill shape)
+      border-radius: 25px; 
       font-size: 16px;
       font-weight: 500;
       cursor: pointer;
@@ -80,11 +81,10 @@ header {
 
       &:hover {
         background-color: $white;
-        color: $primary-red; // Hover bo'lganda ranglar almashishi
+        color: $primary-red;
       }
     }
 
-    // Til tanlash komponenti stili
     .lang-select {
       background: transparent;
       color: $white;
@@ -96,26 +96,81 @@ header {
       outline: none;
 
       option {
-        background-color: $primary-red; // Select ochilganda fon qizil qolishi uchun
+        background-color: $primary-red;
         color: $white;
       }
     }
   }
 }
 
-// 3. Responsive (Mobil qurilmalar uchun moslashuvchanlik)
+// ==========================================
+// 3. Responsive (Planshet va Mobil qurilmalar)
+// ==========================================
+
+// Standart mobil va planshetlar uchun (768px dan pastga)
 @media (max-width: 768px) {
   header {
+    padding: 12px 0;
+
     .container {
-      flex-direction: column;
+      flex-direction: column; // Elementlar ustma-ust tushadi
       gap: 15px;
+      padding: 0 15px; // Yon atrofdagi bo'shliqni biroz kamaytiramiz
     }
     
     .navbar {
       margin: 0;
+      width: 100%;
       
       .nav-links {
-        gap: 20px;
+        justify-content: center;
+        flex-wrap: wrap; // Elementlar sig'may qolsa, chiroyli bo'lib pastga tushadi
+        gap: 10px 25px; // Qatorlararo 10px, yonma-yon 25px masofa
+      }
+    }
+
+    .header-actions {
+      width: 100%;
+      justify-content: center;
+    }
+  }
+}
+
+// Kichik mobil ekranlar uchun maxsus (360px dan 300px gacha)
+@media (max-width: 360px) {
+  header {
+    .container {
+      gap: 12px;
+      padding: 0 10px; // 300px ekranda maksimal joy tejash uchun paddingni 10px qildik
+    }
+
+    .logo {
+      img {
+        height: 32px; // Logotip ekran kengligini egallab qo'ymasligi uchun biroz kichraytirildi
+      }
+    }
+    
+    .navbar {
+      .nav-links {
+        gap: 8px 15px; // Havolalar bir-biriga yopishib ketmasligi uchun masofa ixchamlashtirildi
+        
+        li a {
+          font-size: 14px; // Shrift o'lchami biroz kichraytirildi
+        }
+      }
+    }
+
+    .header-actions {
+      gap: 10px;
+
+      .login-btn {
+        padding: 6px 20px; // Tugma o'lchami kichraytirildi
+        font-size: 14px;
+      }
+
+      .lang-select {
+        padding: 4px 6px;
+        font-size: 13px;
       }
     }
   }
