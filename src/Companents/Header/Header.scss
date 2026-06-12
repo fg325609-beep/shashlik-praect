@@ -1,0 +1,122 @@
+// 1. O'zgaruvchilar (Variables)
+$primary-red: #b11329; // Rasmga mos to'q qizil rang
+$white: #ffffff;
+$font-stack: 'Arial', sans-serif;
+
+// 2. Umumiy qoidalar reset
+header {
+  background-color: $primary-red;
+  font-family: $font-stack;
+  padding: 15px 0;
+  width: 100%;
+  box-sizing: border-box;
+
+  // Konteyner (Elementlarni markazlashtirish)
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  // Logotip qismi
+  .logo {
+    display: flex;
+    align-items: center;
+
+    img {
+      height: 40px; 
+      object-fit: contain;
+    }
+  }
+
+  // Navigatsiya menyusi
+  .navbar {
+    margin-left: auto; // Menyuni o'ng tomonga surish
+    margin-right: 40px;
+
+    .nav-links {
+      display: flex;
+      list-style: none;
+      gap: 35px; // Linklar orasidagi masofa
+      margin: 0;
+      padding: 0;
+
+      li {
+        a {
+          color: $white;
+          text-decoration: none;
+          font-size: 16px;
+          font-weight: 500;
+          transition: opacity 0.3s ease;
+
+          &:hover {
+            opacity: 0.8; // Sichqoncha kelganda biroz xiralashish effekti
+          }
+        }
+      }
+    }
+  }
+
+  // O'ng tomon (Tugma va Til tanlagich)
+  .header-actions {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    // Rasmdagi Log In tugmasi stili
+    .login-btn {
+      background: transparent;
+      color: $white;
+      border: 1px solid $white;
+      padding: 8px 28px;
+      border-radius: 25px; // Dumaloq burchaklar (Pill shape)
+      font-size: 16px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: all 0.3s ease;
+
+      &:hover {
+        background-color: $white;
+        color: $primary-red; // Hover bo'lganda ranglar almashishi
+      }
+    }
+
+    // Til tanlash komponenti stili
+    .lang-select {
+      background: transparent;
+      color: $white;
+      border: 1px solid rgba(255, 255, 255, 0.4);
+      padding: 6px 10px;
+      border-radius: 6px;
+      font-size: 14px;
+      cursor: pointer;
+      outline: none;
+
+      option {
+        background-color: $primary-red; // Select ochilganda fon qizil qolishi uchun
+        color: $white;
+      }
+    }
+  }
+}
+
+// 3. Responsive (Mobil qurilmalar uchun moslashuvchanlik)
+@media (max-width: 768px) {
+  header {
+    .container {
+      flex-direction: column;
+      gap: 15px;
+    }
+    
+    .navbar {
+      margin: 0;
+      
+      .nav-links {
+        gap: 20px;
+      }
+    }
+  }
+}
