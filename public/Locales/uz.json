@@ -3,5 +3,11 @@
   "news": "Yangiliklar",
   "about_us": "Biz haqimizda",
   "contact_us": "Bog‘lanish",
-  "log_in": "Kirish"
+  "log_in": "Kirish",
+  "hero": {
+    "tagline": "Yangi ta'm ortidan",
+    "title": "Oliy darajadagi taomlanish kaliti",
+    "description": "Sit tellus lobortis sed senectus vivamus molestie. Condimentum volutpat morbi facilisis quam scelerisque sapien. Et, penatibus aliquam amet tellus.",
+    "button": "Menyuni kashf eting"
+  }
 }

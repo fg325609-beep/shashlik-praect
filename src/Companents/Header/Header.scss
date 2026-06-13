@@ -3,15 +3,16 @@ $primary-red: #b11329;
 $white: #ffffff;
 $font-stack: 'Arial', sans-serif;
 
-// 2. Umumiy qoidalar reset
+// 2. Umumiy qoidalar
 header {
   background-color: $primary-red;
   font-family: $font-stack;
   padding: 15px 0;
   width: 100%;
   box-sizing: border-box;
+  position: relative;
+  z-index: 100;
 
-  // Konteyner (Elementlarni markazlashtirish)
   .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -22,19 +23,16 @@ header {
     box-sizing: border-box;
   }
 
-  // Logotip qismi
   .logo {
     display: flex;
     align-items: center;
-
     img {
       height: 40px; 
       object-fit: contain;
-      transition: height 0.3s ease;
     }
   }
 
-  // Navigatsiya menyusi
+  // Desktop Navbar
   .navbar {
     margin-left: auto; 
     margin-right: 40px;
@@ -46,23 +44,20 @@ header {
       margin: 0;
       padding: 0;
 
-      li {
-        a {
-          color: $white;
-          text-decoration: none;
-          font-size: 16px;
-          font-weight: 500;
-          transition: opacity 0.3s ease;
+      li a {
+        color: $white;
+        text-decoration: none;
+        font-size: 16px;
+        font-weight: 500;
+        transition: opacity 0.3s ease;
 
-          &:hover {
-            opacity: 0.8;
-          }
+        &:hover {
+          opacity: 0.8;
         }
       }
     }
   }
 
-  // O'ng tomon (Tugma va Til tanlagich)
   .header-actions {
     display: flex;
     align-items: center;
@@ -101,77 +96,123 @@ header {
       }
     }
   }
-}
 
-// ==========================================
-// 3. Responsive (Planshet va Mobil qurilmalar)
-// ==========================================
+  // Burger tugmasi (Desktopda yashirin)
+  .burger-menu {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 24px;
+    height: 18px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 101;
 
-// Standart mobil va planshetlar uchun (768px dan pastga)
-@media (max-width: 768px) {
-  header {
-    padding: 12px 0;
-
-    .container {
-      flex-direction: column; // Elementlar ustma-ust tushadi
-      gap: 15px;
-      padding: 0 15px; // Yon atrofdagi bo'shliqni biroz kamaytiramiz
-    }
-    
-    .navbar {
-      margin: 0;
+    span {
       width: 100%;
-      
-      .nav-links {
-        justify-content: center;
-        flex-wrap: wrap; // Elementlar sig'may qolsa, chiroyli bo'lib pastga tushadi
-        gap: 10px 25px; // Qatorlararo 10px, yonma-yon 25px masofa
+      height: 2px;
+      background-color: $white;
+      transition: all 0.3s ease;
+    }
+
+    // Burger bosilganda 'X' (yopish) belgisiga aylanish animatsiyasi
+    &.open {
+      span:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
       }
-    }
-
-    .header-actions {
-      width: 100%;
-      justify-content: center;
+      span:nth-child(2) {
+        opacity: 0;
+      }
+      span:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+      }
     }
   }
 }
 
-// Kichik mobil ekranlar uchun maxsus (360px dan 300px gacha)
-@media (max-width: 360px) {
+// Orqa fonni to'suvchi xira qatlam
+.menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 98;
+}
+
+// ==========================================
+// 3. Responsive (Modal menyu dizayni)
+// ==========================================
+
+@media (max-width: 768px) {
   header {
-    .container {
-      gap: 12px;
-      padding: 0 10px; // 300px ekranda maksimal joy tejash uchun paddingni 10px qildik
+    .burger-menu {
+      display: flex; // Mobil ekranda burger chiqadi
     }
 
-    .logo {
-      img {
-        height: 32px; // Logotip ekran kengligini egallab qo'ymasligi uchun biroz kichraytirildi
-      }
-    }
-    
+    // Navbar endi yon tomondan chiquvchi Modal vazifasini bajaradi
     .navbar {
+      position: fixed;
+      top: 0;
+      right: -100%; // Menyuni boshida o'ng tomonga berkitib turamiz
+      width: 260px;  // Modal kengligi
+      height: 100vh;
+      background-color: darken($primary-red, 5%); // Biroz to'qroq qizil
+      box-shadow: -5px 0 15px rgba(0, 0, 0, 0.2);
+      z-index: 99;
+      margin: 0;
+      padding: 80px 30px; // Yuqoridan joy tashlaymiz
+      transition: right 0.4s ease-in-out;
+
+      // Active klassi qo'shilganda ichkariga sirg'alib kiradi
+      &.active {
+        right: 0;
+      }
+
       .nav-links {
-        gap: 8px 15px; // Havolalar bir-biriga yopishib ketmasligi uchun masofa ixchamlashtirildi
-        
+        flex-direction: column; // Havolalar ketma-ket joylashadi
+        gap: 25px;
+
         li a {
-          font-size: 14px; // Shrift o'lchami biroz kichraytirildi
+          font-size: 18px;
+          display: block;
+          width: 100%;
         }
       }
     }
+  }
+}
+
+// Eng kichik mobil ekranlar uchun (300px gacha)
+@media (max-width: 360px) {
+  header {
+    .container {
+      padding: 0 10px;
+    }
+    
+    .logo img {
+      height: 32px;
+    }
 
     .header-actions {
-      gap: 10px;
+      gap: 8px;
 
       .login-btn {
-        padding: 6px 20px; // Tugma o'lchami kichraytirildi
-        font-size: 14px;
+        padding: 6px 15px;
+        font-size: 13px;
       }
 
       .lang-select {
-        padding: 4px 6px;
-        font-size: 13px;
+        padding: 4px 5px;
+        font-size: 12px;
       }
+    }
+
+    .navbar {
+      width: 220px; // Kichik ekranlar uchun modalni ixchamlashtirdik
     }
   }
 }

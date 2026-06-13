@@ -3,5 +3,11 @@
   "news": "Новости",
   "about_us": "О нас",
   "contact_us": "Контакты",
-  "log_in": "Войти"
+  "log_in": "Войти",
+  "hero": {
+    "tagline": "В погоне за новым вкусом",
+    "title": "Ключ к изысканному ужину",
+    "description": "Sit tellus lobortis sed senectus vivamus molestie. Condimentum volutpat morbi facilisis quam scelerisque sapien. Et, penatibus aliquam amet tellus.",
+    "button": "Изучить меню"
+  }
 }
