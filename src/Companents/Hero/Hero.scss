@@ -1,9 +1,7 @@
-// 1. O'zgaruvchilar (Variables)
 $bg-color: #b91c1c;       
 $text-white: #ffffff;
 $font-main: 'Poppins', 'Montserrat', sans-serif;
 
-// 2. Asosiy stillar (Desktop)
 .hero {
   background-color: $bg-color;
   min-height: 100vh;
@@ -100,7 +98,6 @@ $font-main: 'Poppins', 'Montserrat', sans-serif;
   }
 }
 
-// 3. Responsivlik (Planshet va o'rtacha telefonlar uchun)
 @media (max-width: 992px) {
   .hero {
     flex-direction: column;
@@ -129,7 +126,6 @@ $font-main: 'Poppins', 'Montserrat', sans-serif;
   }
 }
 
-// 4. Eng kichik ekranlar uchun (300px gacha bo'lgan smartfonlar)
 @media (max-width: 400px) {
   .hero {
     padding: 40px 15px; // Yon tomondagi joyni kamaytirdik

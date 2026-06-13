@@ -1,13 +1,50 @@
 {
+  "home": "Bosh sahifa",
   "menu": "Menyu",
   "news": "Yangiliklar",
   "about_us": "Biz haqimizda",
-  "contact_us": "Bog‘lanish",
+  "contact_us": "Bog'lanish",
   "log_in": "Kirish",
   "hero": {
     "tagline": "Yangi ta'm ortidan",
     "title": "Oliy darajadagi taomlanish kaliti",
     "description": "Sit tellus lobortis sed senectus vivamus molestie. Condimentum volutpat morbi facilisis quam scelerisque sapien. Et, penatibus aliquam amet tellus.",
     "button": "Menyuni kashf eting"
+  },
+  "about": {
+    "breadcrumb_home": "Bosh sahifa",
+    "breadcrumb_about": "Biz haqimizda",
+    "title": "Biz haqimizda",
+    "subtitle": "Bizning tariximiz",
+    "heading": "Sirli masalliq — bu doimo sevgi va an'analar",
+    "description1": "Sit tellus feugiat turpis risus nullam integer feugiat scelerisque. Morb iis tellus placerat veblandit volutpat. Restoranimiz sizga ko'p yillik an'analar va o'zgacha turk hamda milliy taomlar uyg'unligini taqdim etadi.",
+    "description2": "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Har bir taom professional oshpazlarimiz tomonidan mehr bilan tayyorlanadi.",
+    "quote": "\"Kandil o'chguncha emas, to umr tugaguncha eng oliy sifatli xizmat!\"",
+    "chef_word": "Oshpaz so'zi",
+    "chef_heading": "Biz nimaga ishonamiz",
+    "chef_description": "Nulla porttitor accumsan tincidunt. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Cras ultricies ligula sed magna dictum porta. Pazandachilik san'ati — bu shunchaki ovqat tayyorlash emas, bu xotiralar yaratishdir.",
+    "chef_name": "Kevin Luo",
+    "chef_role": "Oshpaz va asoschisi",
+    "gallery_title": "Galereya",
+    "gallery_heading": "Bizning atmosfera"
+  },
+  "menu_page": {
+    "breadcrumb_home": "Bosh sahifa",
+    "breadcrumb_menu": "Menyu",
+    "sidebar_title": "Doimiy menyu paketimiz",
+    "all": "Barchasi",
+    "instagram_title": "Instagram",
+    "gallery_heading": "Foto galereya",
+    "gallery_description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Volutpat mattis egestas nam ut omis.",
+    "view_more": "Ko'proq ko'rish"
+  },
+  "news_page": {
+    "breadcrumb_home": "Bosh sahifa",
+    "breadcrumb_news": "Yangiliklar",
+    "title": "Yangiliklar",
+    "read_more": "Batafsil o'qish",
+    "view_more": "Ko'proq ko'rish",
+    "post_title": "Grilingizni tayyorlash va parvarish qilish bo'yicha maslahatlar",
+    "post_description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Volutpat mattis egestas nam ut omis."
   }
 }

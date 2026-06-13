@@ -1,7 +1,50 @@
 {
+  "home": "Home",
   "menu": "Menu",
   "news": "News",
   "about_us": "About Us",
   "contact_us": "Contact Us",
-  "log_in": "Log In"
+  "log_in": "Log In",
+  "hero": {
+    "tagline": "In Search of New Taste",
+    "title": "The Key to Fine Dining",
+    "description": "Sit tellus lobortis sed senectus vivamus molestie. Condimentum volutpat morbi facilisis quam scelerisque sapien. Et, penatibus aliquam amet tellus.",
+    "button": "Explore Menu"
+  },
+  "about": {
+    "breadcrumb_home": "Home",
+    "breadcrumb_about": "About Us",
+    "title": "About Us",
+    "subtitle": "Our History",
+    "heading": "The Secret Ingredient Is Always Love & Tradition",
+    "description1": "Sit tellus feugiat turpis risus nullam integer feugiat scelerisque. Morb iis tellus placerat veblandit volutpat. Our restaurant offers you a harmony of long-standing traditions and unique Turkish and national cuisines.",
+    "description2": "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Every dish is prepared with love by our professional chefs.",
+    "quote": "\"Until the candle goes out, not until life ends — the highest quality service!\"",
+    "chef_word": "Chef's Word",
+    "chef_heading": "What We Believe In",
+    "chef_description": "Nulla porttitor accumsan tincidunt. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Cras ultricies ligula sed magna dictum porta. Culinary art is not just about making food, it's about creating memories.",
+    "chef_name": "Kevin Luo",
+    "chef_role": "Chef & Founder",
+    "gallery_title": "Gallery",
+    "gallery_heading": "Our Atmosphere"
+  },
+  "menu_page": {
+    "breadcrumb_home": "Home",
+    "breadcrumb_menu": "Menu",
+    "sidebar_title": "Our Regular Menu Pack",
+    "all": "All",
+    "instagram_title": "Instagram",
+    "gallery_heading": "Photo Gallery",
+    "gallery_description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Volutpat mattis egestas nam ut omis.",
+    "view_more": "View More"
+  },
+  "news_page": {
+    "breadcrumb_home": "Home",
+    "breadcrumb_news": "News",
+    "title": "News",
+    "read_more": "Read More",
+    "view_more": "View More",
+    "post_title": "Tips For Preparing And Caring For Your Grill",
+    "post_description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Volutpat mattis egestas nam ut omis."
+  }
 }

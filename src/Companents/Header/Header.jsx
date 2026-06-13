@@ -1,11 +1,13 @@
 import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
+import { Link, useLocation } from 'react-router-dom';
 import logo from '../img/logo.png';
 import "./Header.scss";
 
 const Header = () => {
   const { t, i18n } = useTranslation();
   const [ isMenuOpen, setIsMenuOpen ] = useState( false );
+  const location = useLocation();
 
   const changeLanguage = ( event ) => {
     i18n.changeLanguage( event.target.value );
@@ -19,15 +21,31 @@ const Header = () => {
     <header>
       <div className="container">
         <div className="logo">
-          <img src={ logo } alt="EATURKISH" />
+          <Link to="/">
+            <img src={ logo } alt="EATURKISH" />
+          </Link>
         </div>
 
         <nav className={ `navbar ${ isMenuOpen ? 'active' : '' }` }>
           <ul className="nav-links">
-            <li><a href="#menu" onClick={ () => setIsMenuOpen( false ) }>{ t( 'menu' ) }</a></li>
-            <li><a href="#news" onClick={ () => setIsMenuOpen( false ) }>{ t( 'news' ) }</a></li>
-            <li><a href="#about" onClick={ () => setIsMenuOpen( false ) }>{ t( 'about_us' ) }</a></li>
-            <li><a href="#contact" onClick={ () => setIsMenuOpen( false ) }>{ t( 'contact_us' ) }</a></li>
+            <li>
+              <Link to="/" onClick={ () => setIsMenuOpen( false ) } className={ location.pathname === '/' ? 'active-link' : '' }>
+                { t( 'menu' ) }
+              </Link>
+            </li>
+            <li>
+              <Link to="/news" onClick={ () => setIsMenuOpen( false ) } className={ location.pathname === '/news' ? 'active-link' : '' }>
+                { t( 'news' ) }
+              </Link>
+            </li>
+            <li>
+              <Link to="/about" onClick={ () => setIsMenuOpen( false ) } className={ location.pathname === '/about' ? 'active-link' : '' }>
+                { t( 'about_us' ) }
+              </Link>
+            </li>
+            <li>
+              <a href="#contact" onClick={ () => setIsMenuOpen( false ) }>{ t( 'contact_us' ) }</a>
+            </li>
           </ul>
         </nav>
 
