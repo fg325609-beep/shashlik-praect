@@ -1,6 +1,7 @@
 import React from 'react'
 import { useTranslation } from 'react-i18next';
 import "./Hero.scss"
+import shashlikImg from '../img/shashlik.png';
 const Hero = () => {
       const { t, i18n } = useTranslation();
     
@@ -14,7 +15,7 @@ const Hero = () => {
                     <button>{t('hero.button')}</button>
          </div>
          <div className="hero_right">
-            <img src="src/Companents/img/shashlik.png" alt="shashlik" />
+            <img src={shashlikImg} alt="shashlik" />
          </div>
         </section>
     </div>

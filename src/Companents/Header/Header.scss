@@ -1,9 +1,7 @@
-// 1. O'zgaruvchilar (Variables)
-$primary-red: #b11329; 
+$primary-red: #b11329;
 $white: #ffffff;
 $font-stack: 'Arial', sans-serif;
 
-// 2. Umumiy qoidalar
 header {
   background-color: $primary-red;
   font-family: $font-stack;
@@ -27,20 +25,19 @@ header {
     display: flex;
     align-items: center;
     img {
-      height: 40px; 
+      height: 40px;
       object-fit: contain;
     }
   }
 
-  // Desktop Navbar
   .navbar {
-    margin-left: auto; 
+    margin-left: auto;
     margin-right: 40px;
 
     .nav-links {
       display: flex;
       list-style: none;
-      gap: 35px; 
+      gap: 35px;
       margin: 0;
       padding: 0;
 
@@ -68,7 +65,7 @@ header {
       color: $white;
       border: 1px solid $white;
       padding: 8px 28px;
-      border-radius: 25px; 
+      border-radius: 25px;
       font-size: 16px;
       font-weight: 500;
       cursor: pointer;
@@ -97,7 +94,6 @@ header {
     }
   }
 
-  // Burger tugmasi (Desktopda yashirin)
   .burger-menu {
     display: none;
     flex-direction: column;
@@ -117,7 +113,6 @@ header {
       transition: all 0.3s ease;
     }
 
-    // Burger bosilganda 'X' (yopish) belgisiga aylanish animatsiyasi
     &.open {
       span:nth-child(1) {
         transform: translateY(8px) rotate(45deg);
@@ -132,7 +127,6 @@ header {
   }
 }
 
-// Orqa fonni to'suvchi xira qatlam
 .menu-overlay {
   position: fixed;
   top: 0;
@@ -143,37 +137,30 @@ header {
   z-index: 98;
 }
 
-// ==========================================
-// 3. Responsive (Modal menyu dizayni)
-// ==========================================
-
 @media (max-width: 768px) {
   header {
     .burger-menu {
-      display: flex; // Mobil ekranda burger chiqadi
+      display: flex;
     }
 
-    // Navbar endi yon tomondan chiquvchi Modal vazifasini bajaradi
     .navbar {
       position: fixed;
       top: 0;
-      right: -100%; // Menyuni boshida o'ng tomonga berkitib turamiz
-      width: 260px;  // Modal kengligi
+      right: -100%;
+      width: 260px;
       height: 100vh;
-      background-color: darken($primary-red, 5%); // Biroz to'qroq qizil
       box-shadow: -5px 0 15px rgba(0, 0, 0, 0.2);
       z-index: 99;
       margin: 0;
-      padding: 80px 30px; // Yuqoridan joy tashlaymiz
+      padding: 80px 30px;
       transition: right 0.4s ease-in-out;
 
-      // Active klassi qo'shilganda ichkariga sirg'alib kiradi
       &.active {
         right: 0;
       }
 
       .nav-links {
-        flex-direction: column; // Havolalar ketma-ket joylashadi
+        flex-direction: column;
         gap: 25px;
 
         li a {
@@ -186,7 +173,6 @@ header {
   }
 }
 
-// Eng kichik mobil ekranlar uchun (300px gacha)
 @media (max-width: 360px) {
   header {
     .container {
@@ -212,7 +198,7 @@ header {
     }
 
     .navbar {
-      width: 220px; // Kichik ekranlar uchun modalni ixchamlashtirdik
+      width: 220px;
     }
   }
 }
