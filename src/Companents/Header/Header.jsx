@@ -30,6 +30,11 @@ const Header = () => {
           <ul className="nav-links">
             <li>
               <Link to="/" onClick={ () => setIsMenuOpen( false ) } className={ location.pathname === '/' ? 'active-link' : '' }>
+                { t( 'home' ) }
+              </Link>
+            </li>
+            <li>
+              <Link to="/menu" onClick={ () => setIsMenuOpen( false ) } className={ location.pathname === '/menu' ? 'active-link' : '' }>
                 { t( 'menu' ) }
               </Link>
             </li>

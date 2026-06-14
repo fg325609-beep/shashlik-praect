@@ -112,7 +112,7 @@ $font-main: 'Poppins', 'Montserrat', sans-serif;
       align-items: center;
 
       h1 {
-        font-size: 3rem; // Ekran kichrayganda sarlavha ham kichrayadi
+        font-size: 3rem;
       }
     }
 
@@ -128,7 +128,7 @@ $font-main: 'Poppins', 'Montserrat', sans-serif;
 
 @media (max-width: 400px) {
   .hero {
-    padding: 40px 15px; // Yon tomondagi joyni kamaytirdik
+    padding: 40px 15px;
     gap: 25px;
 
     &_left {
@@ -138,7 +138,7 @@ $font-main: 'Poppins', 'Montserrat', sans-serif;
       }
 
       h1 {
-        font-size: 2rem; // 300px ekranda matn buzilib ketmasligi uchun o'lcham
+        font-size: 2rem;
         margin-bottom: 15px;
       }
 
@@ -155,7 +155,7 @@ $font-main: 'Poppins', 'Montserrat', sans-serif;
     }
 
     &_right img {
-      max-width: 85%; // Rasm juda kichrayib ketmasligi uchun foizini oshirdik
+      max-width: 85%;
     }
   }
 }

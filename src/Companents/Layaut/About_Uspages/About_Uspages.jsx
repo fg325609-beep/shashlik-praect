@@ -1,13 +1,10 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
+import shashlikImg from '../../img/shashlik.png';
 import "./About_Uspages.scss";
 
-const galleryImages = [
-  "https://via.placeholder.com/400x300",
-  "https://via.placeholder.com/400x300",
-  "https://via.placeholder.com/400x300",
-];
+  const galleryImages = Array(3).fill(null).map((_, i) => shashlikImg);
 
 export default function AboutPage() {
   const { t } = useTranslation();
@@ -32,7 +29,7 @@ export default function AboutPage() {
             <div className="about-history-image">
               <div className="about-history-img-wrap">
                 <img
-                  src="src/Companents/img/shashlik.png"
+                  src={shashlikImg}
                   alt={t('about.title')}
                 />
               </div>
@@ -70,7 +67,7 @@ export default function AboutPage() {
             <div className="about-chef-image">
               <div className="about-chef-img-wrap">
                 <img
-                  src="src/Companents/img/shashlik.png"
+                  src={shashlikImg}
                   alt={t('about.chef_name')}
                 />
               </div>
@@ -89,7 +86,7 @@ export default function AboutPage() {
           <div className="about-gallery-grid">
             {galleryImages.map((imgUrl, idx) => (
               <div key={idx} className="about-gallery-item">
-                <img src="src/Companents/img/shashlik.png" alt={`Interior ${idx + 1}`} />
+                <img src={shashlikImg} alt={`Interior ${idx + 1}`} />
               </div>
             ))}
           </div>

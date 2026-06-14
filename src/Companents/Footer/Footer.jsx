@@ -1,5 +1,6 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
+import logoImg from '../img/logo.png';
 import "./Footer.scss";
 
 export default function Footer() {
@@ -35,7 +36,7 @@ export default function Footer() {
 
           <div className="footer-col footer-brand">
             <div className="footer-logo">
-              <img src="src/Companents/img/logo.png" alt="Logo" />
+              <img src={logoImg} alt="Logo" />
             </div>
             <p className="footer-quote">
               {t('footer.quote')}
