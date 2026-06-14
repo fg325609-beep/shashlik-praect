@@ -9,10 +9,10 @@ const Sectiontwo = () => {
   const [isPlaying, setIsPlaying] = useState(true);
 
   const slides = [
-    { content: t("hero.tagline") },
-    { content: "Slide 2" },
-    { content: "Slide 3" },
-    { content: "Slide 4" },
+    { content: t("sectiontwo.slide1") },
+    { content: t("sectiontwo.slide2") },
+    { content: t("sectiontwo.slide3") },
+    { content: t("sectiontwo.slide4") },
   ];
 
   useEffect(() => {
@@ -37,7 +37,7 @@ const Sectiontwo = () => {
 
   return (
     <section className="sectiontwo-container">
-      <h2>{t("hero.title")}</h2>
+      <h2>{t("sectiontwo.heading")}</h2>
       <div className="custom-slider">
         <div className="slider-viewport">
           <div

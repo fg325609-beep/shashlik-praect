@@ -7,6 +7,7 @@ import Sectiontwo from './Companents/Sectiontwo/Sectiontwo';
 import MenuPage from './Companents/Layaut/Menupages/Menupages';
 import NewsPage from './Companents/Layaut/Newspages/Newspages';
 import AboutPage from './Companents/Layaut/About_Uspages/About_Uspages';
+import ContactPage from './Companents/Layaut/Contactpage/Contactpage';
 import Footer from './Companents/Footer/Footer';
 
 const Home = () => {
@@ -14,6 +15,7 @@ const Home = () => {
     <>
       <Hero />
       <Sectiontwo />
+      <MenuPage />
     </>
   );
 };
@@ -27,6 +29,7 @@ const App = () => {
         <Route path="/menu" element={<MenuPage />} />
         <Route path="/news" element={<NewsPage />} />
         <Route path="/about" element={<AboutPage />} />
+        <Route path="/contact" element={<ContactPage />} />
       </Routes>
       <Footer />
     </>

@@ -49,7 +49,9 @@ const Header = () => {
               </Link>
             </li>
             <li>
-              <a href="#contact" onClick={ () => setIsMenuOpen( false ) }>{ t( 'contact_us' ) }</a>
+              <Link to="/contact" onClick={ () => setIsMenuOpen( false ) } className={ location.pathname === '/contact' ? 'active-link' : '' }>
+                { t( 'contact_us' ) }
+              </Link>
             </li>
           </ul>
         </nav>

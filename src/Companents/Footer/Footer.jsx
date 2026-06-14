@@ -10,12 +10,12 @@ export default function Footer() {
     <footer className="footer">
       <div className="footer-newsletter">
         <div className="newsletter-content">
-          <h5>Newsletter</h5>
-          <h1>Subscribe to Our Newsletter</h1>
-          <p>And never miss latest Updates!</p>
+          <h5>{t('footer.newsletter_title')}</h5>
+          <h1>{t('footer.newsletter_heading')}</h1>
+          <p>{t('footer.newsletter_text')}</p>
           <form action="" method="post">
-            <input type="email" placeholder="Email Address" />
-            <button>Subscribe</button>
+            <input type="email" placeholder={t('footer.newsletter_placeholder')} />
+            <button>{t('footer.newsletter_button')}</button>
           </form>
         </div>
       </div>
