@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import shashlikImg from '../../img/shashlik.png';
 import "./About_Uspages.scss";
 
-  const galleryImages = Array(3).fill(null).map((_, i) => shashlikImg);
+const galleryImages = Array(3).fill(null).map((_, i) => shashlikImg);
 
 export default function AboutPage() {
   const { t } = useTranslation();

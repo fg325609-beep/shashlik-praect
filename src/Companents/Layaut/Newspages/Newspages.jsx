@@ -1,6 +1,7 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
+import snekImg from '../../img/snek.jpg';
 import "./Newspages.scss";
 
 const blogPosts = Array(9).fill(null).map((_, i) => ({
@@ -8,7 +9,7 @@ const blogPosts = Array(9).fill(null).map((_, i) => ({
   titleKey: "news_page.post_title",
   descriptionKey: "news_page.post_description",
   date: "16 May, 2026",
-  image: "src/Companents/img/snek.jpg"
+  image: snekImg
 }));
 
 export default function NewsPage() {
