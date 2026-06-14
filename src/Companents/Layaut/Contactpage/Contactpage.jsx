@@ -198,14 +198,17 @@ export default function ContactPage() {
 
             <div className="contact-map">
               <h3>{t('contact_page.map_title')}</h3>
-              <div className="contact-map-placeholder">
-                <div className="contact-map-marker">
-                  <i className="fa-solid fa-location-dot"></i>
-                </div>
-                <div className="contact-map-controls">
-                  <button className="map-zoom">+</button>
-                  <button className="map-zoom">-</button>
-                </div>
+              <div className="contact-map-iframe">
+                <iframe 
+                  src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d273.6703994669508!2d69.26492570784666!3d41.408823601090404!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1sru!2s!4v1781431612044!5m2!1sru!2s" 
+                  width="100%" 
+                  height="350" 
+                  style={{ border: 0, borderRadius: '12px' }} 
+                  allowFullScreen 
+                  loading="lazy" 
+                  referrerPolicy="no-referrer-when-downgrade"
+                  title="EATURKISH Location">
+                </iframe>
               </div>
             </div>
           </div>
