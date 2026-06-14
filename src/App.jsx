@@ -7,6 +7,7 @@ import Sectiontwo from './Companents/Sectiontwo/Sectiontwo';
 import MenuPage from './Companents/Layaut/Menupages/Menupages';
 import NewsPage from './Companents/Layaut/Newspages/Newspages';
 import AboutPage from './Companents/Layaut/About_Uspages/About_Uspages';
+import Footer from './Companents/Footer/Footer';
 
 const Home = () => {
   return (
@@ -27,6 +28,7 @@ const App = () => {
         <Route path="/news" element={<NewsPage />} />
         <Route path="/about" element={<AboutPage />} />
       </Routes>
+      <Footer />
     </>
   );
 };

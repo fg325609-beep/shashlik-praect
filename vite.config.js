@@ -6,5 +6,9 @@ export default defineConfig({
   plugins: [react()],
   optimizeDeps: {
     include: ['react-slick'],
+    force: true,
+  },
+  ssr: {
+    noExternal: ['react-slick'],
   },
 })

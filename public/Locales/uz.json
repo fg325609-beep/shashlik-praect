@@ -46,5 +46,18 @@
     "view_more": "Ko'proq ko'rish",
     "post_title": "Grilingizni tayyorlash va parvarish qilish bo'yicha maslahatlar",
     "post_description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Volutpat mattis egestas nam ut omis."
+  },
+  "footer": {
+    "contact_title": "Bog'lanish",
+    "address": "9 W 53rd St, London, NY 10019, UK",
+    "phone1": "+1 212-344-1230",
+    "phone2": "+1 212-555-1230",
+    "quote": "\"O'zingni topishning eng yaxshi yo'li — o'zingni boshqalarga xizmat qilishda yo'qotishdir.\"",
+    "hours_title": "Ish vaqti",
+    "weekdays": "Dushanba-Juma:",
+    "weekdays_hours": "08:00 - 12:00",
+    "weekend": "Shanba-Yakshanba:",
+    "weekend_hours": "07:00 - 23:00",
+    "copyright": "2022 Pop online. Barcha huquqlar himoyalangan."
   }
 }

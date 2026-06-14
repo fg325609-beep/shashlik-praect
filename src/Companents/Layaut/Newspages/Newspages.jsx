@@ -8,7 +8,7 @@ const blogPosts = Array(9).fill(null).map((_, i) => ({
   titleKey: "news_page.post_title",
   descriptionKey: "news_page.post_description",
   date: "16 May, 2026",
-  image: "https://via.placeholder.com/400x250"
+  image: "src/Companents/img/snek.jpg"
 }));
 
 export default function NewsPage() {
@@ -54,6 +54,7 @@ export default function NewsPage() {
         <div className="news-view-more">
           <button>{t('news_page.view_more')}</button>
         </div>
+     
       </div>
     </div>
   );

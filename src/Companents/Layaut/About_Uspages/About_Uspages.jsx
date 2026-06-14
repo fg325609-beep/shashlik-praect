@@ -32,7 +32,7 @@ export default function AboutPage() {
             <div className="about-history-image">
               <div className="about-history-img-wrap">
                 <img
-                  src="https://via.placeholder.com/600x400"
+                  src="src/Companents/img/shashlik.png"
                   alt={t('about.title')}
                 />
               </div>
@@ -70,7 +70,7 @@ export default function AboutPage() {
             <div className="about-chef-image">
               <div className="about-chef-img-wrap">
                 <img
-                  src="https://via.placeholder.com/350x450"
+                  src="src/Companents/img/shashlik.png"
                   alt={t('about.chef_name')}
                 />
               </div>
@@ -89,10 +89,7 @@ export default function AboutPage() {
           <div className="about-gallery-grid">
             {galleryImages.map((imgUrl, idx) => (
               <div key={idx} className="about-gallery-item">
-                <img
-                  src={imgUrl}
-                  alt={`Interior ${idx + 1}`}
-                />
+                <img src="src/Companents/img/shashlik.png" alt={`Interior ${idx + 1}`} />
               </div>
             ))}
           </div>
